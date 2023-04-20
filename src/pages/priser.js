@@ -40,7 +40,7 @@ export default function priser(){
        </p></div>
        <div className="klippekort-box">
         <div className="klippekort-content">
-        <p>15 timer i klippekort</p>
+        <p className="bold">15 timer i klippekort</p>
         <h1 className="pad-bund">10.125,-</h1>
         <p>Ved forudbetalt køb af +15 timer får du 10% rabat (675 kr.) med klippekortet.  </p>
         <hr/>

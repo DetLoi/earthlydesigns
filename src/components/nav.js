@@ -29,29 +29,18 @@ export default function Nav(){
         className={
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
         <ul>
+
           <li>
-            <a id="btnmobil" href="/">Hjem</a>
+            <NavLink id="btnlaptop" onClick={() => {setIsNavExpanded(!isNavExpanded); }} to="/">Hjem</NavLink>
           </li>
           <li>
-            <NavLink id="btnlaptop" to="/">Hjem</NavLink>
+            <NavLink id="btnlaptop" onClick={() => {setIsNavExpanded(!isNavExpanded); }} to="/cases">Cases</NavLink>
           </li>
           <li>
-            <a id="btnmobil" href="/cases">Cases</a>
+          <NavLink  id="btnlaptop" onClick={() => {setIsNavExpanded(!isNavExpanded); }} to="/priser">Priser</NavLink>
           </li>
           <li>
-            <NavLink id="btnlaptop" to="/cases">Cases</NavLink>
-          </li>
-          <li>
-          <a id="btnmobil" href="/priser">Priser</a>
-          </li>
-          <li>
-          <NavLink  id="btnlaptop" to="/priser">Priser</NavLink>
-          </li>
-          <li>
-          <a id="btnmobil" href="/kontakt">Kontakt</a>
-          </li>
-          <li>
-          <NavLink id="btnlaptop" className="kontaktbtn" to="/kontakt">Kontakt</NavLink>
+          <NavLink id="btnlaptop" onClick={() => {setIsNavExpanded(!isNavExpanded); }} className="kontaktbtn" to="/kontakt">Kontakt</NavLink>
           </li>
         </ul>
       </div>

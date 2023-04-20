@@ -1,41 +1,31 @@
 import { NavLink } from "react-router-dom";
 import pccase1 from "../images/innocent laptop.webp";
 import mcase2 from "../images/aliter mobil.webp"
-import Lottie from "lottie-react";
-import anim1 from "../animations/lottielogo.json"
-import logoblack from "../images/logo.svg"
 import React, { useState } from "react";
+import Lottielogo from "../components/lottie";
+import loi from "../images/loi.webp"
+import sofie from "../images/sofie.webp"
+import marius from "../images/marius.webp"
+import andreas from "../images/andreas.webp"
 
 
 
 export default function Hjem(){
-    const [isStopped, setIsStopped] = useState(false);
-
-  const onEnterFrame = (animation) => {
-    const progress = animation.playCount / animation.totalFrames;
-    if (progress >= 0.5 && !isStopped) {
-      setIsStopped(true);
-    }
-  };
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     return(
        <main id="forside">
         <section className="landingpage">
         <div className="animationbox">
-          <Lottie
-            className="lottielogo"
-            animationData={anim1}
-            loop={true}
-            autoplay={true}
-            isStopped={isStopped}
-            config={{
-              onEnterFrame: onEnterFrame,
-            }}
-          />
+          <Lottielogo
+            className="lottielogo"/>
         </div>
         <div className="textbox">
-            <h1 className="pad-bund">Miljøvenlige hjemmesider: Godt for din virksomhed, bedre for planeten!</h1>
-            <p>Planet-venlige og performance dygtige løsninger: Earthly Designs <span className="boldhtml">skaber hjemmesider</span> og re-designs med fokus på miljøvenlige tiltag, der vil få din målgruppe og verden til at smile. Vi guider og samarbejder med kunden for at skabe en digital løsning som overholder vores værdier, uden at gå på kompromis med kundens brugerbehov.
+            <h1 className="pad-bund">Miljøvenlige hjemmesider: Godt for din virksomhed, bedre for <span className="greenhtml">planeten!</span></h1>
+            <p className="pad-bund-2"> Earthly Designs skaber planet-venlige og performance dygtige hjemmesider og re-designs med fokus på miljøvenlige tiltag, der vil få din målgruppe og verden til at smile. Vi guider og samarbejder med kunden for at skabe en digital løsning som overholder vores værdier, uden at gå på kompromis med kundens brugerbehov.
             </p>
+            <NavLink to="/cases"><button class="custom-button">Se forrige cases</button></NavLink>
         </div>
         </section>
 
@@ -81,12 +71,12 @@ export default function Hjem(){
             <h3>Innocent, Aliter networks og mange flere!</h3>
             <p>Vi har hjulpet en bred vifte af virksomheder med at optimere deres hjemmesider.<br/>
 Kig på vores forrige cases, for at få en indblik i hvad vi kan gøre for jer.</p>
-<NavLink to="/cases"><button class="custom-button">Se forrige projekter</button></NavLink>
+<NavLink to="/cases"><button class="custom-button">Se forrige cases</button></NavLink>
         </div>
         </section>
         <section id="manifesto-box">
             <div  className="manifest-titel">
-        <h1 className="pad-bund">Miljøvenlige designs</h1>
+        <h1 className="pad-bund">Bæredygtige principper</h1>
         <p>Når det kommer til den ultimative guide til miljøvenligt webdesign, er Sustainable Web Manifesto det bedste sted at gå hen. Deres seks grundlæggende principper vil hjælpe dig med at måle, hvor bæredygtig din hjemmeside er, og hvor du kan forbedre:</p>
 </div>   
  <div id="all6">
@@ -138,9 +128,11 @@ Kig på vores forrige cases, for at få en indblik i hvad vi kan gøre for jer.<
         </section>
         <section id="fokus">
         <h1 className="pad-bund">Bæredygtighed i fokus </h1>
-        <p>Vi bruger carbon calculators og Google Analytics til at vurdere vores hjemmesiders miljøpåvirkning og identificere muligheder for forbedring. Ved at analysere data fra disse værktøjer kan vi fjerne unødvendige URL'er og duplikeret indhold, hvilket resulterer i en mere strømlinet og energieffektiv hjemmeside.
+        <p className="pad-bund-2">Vi bruger carbon calculators og Google Analytics til at vurdere vores hjemmesiders miljøpåvirkning og identificere muligheder for forbedring. Ved at analysere data fra disse værktøjer kan vi fjerne unødvendige URL'er og duplikeret indhold, hvilket resulterer i en mere strømlinet og energieffektiv hjemmeside.
 <br/><br/>For at sikre, at vi konstant forbedrer os, sætter vi målrettede KPI'er (Key Performance Indicators) for CO2-udledning pr. sidevisning, carbon footprint og bæredygtighedsreduktion. Disse mål hjælper os med at overvåge og forbedre vores hjemmesiders bæredygtighed og sikre, at vi hele tiden arbejder mod en grønnere fremtid.</p>
-        </section>
+<NavLink to="https://sustainablewebdesign.org/" target="_blank" rel="noopener noreferrer">
+  <button className="custom-button">Læs mere om bæredygtig webdesign</button>
+</NavLink>        </section>
         <section id="prissektion">
             <div className="pris-text">
         <h1 className="pad-bund">Priser </h1>
@@ -168,7 +160,7 @@ Kig på vores forrige cases, for at få en indblik i hvad vi kan gøre for jer.<
         <p id="moms-tekst">*Alle priser er angivet ekskl. moms.</p>
        </div>
         </section>
-        <section className="klippekort">
+        <section className="klippekort pad-bund-2">
             <div className="klippekort-tekst">
 <h3 className="pad-bund">Klippekort</h3>
        <p>
@@ -176,8 +168,8 @@ Kig på vores forrige cases, for at få en indblik i hvad vi kan gøre for jer.<
        </p></div>
        <div className="klippekort-box">
         <div className="klippekort-content">
-        <p>15 timer i klippekort</p>
-        <h1 className="pad-bund">10.125,-</h1>
+        <p className="bold">15 timer i klippekort</p>
+        <h1 className="pad-bund-2">10.125,-</h1>
         <p>Ved forudbetalt køb af +15 timer får du 10% rabat (675 kr.) med klippekortet.  </p>
         <hr/>
         <div className="klippekort-info">
@@ -188,21 +180,57 @@ Kig på vores forrige cases, for at få en indblik i hvad vi kan gøre for jer.<
        </div> 
  </section>
 
-        <section id="kontakt">
-        <div className="placeholder-2"><img className="footerlogo" src={logoblack} alt="logo"/></div>
-            <div>
-        <h1 className="pad-bund">Vores team er klar til at hjælpe - Tag kontakt i dag! </h1>
+ <section id="kontakt">
+        <div className="placeholder-2">
+        <div className="cvfoto-par">      
+            <div className="cvfoto">
+              <img className="cvfoto-enkel" src={loi} alt="Loi"/>
+            </div>
+            <div className="cvfoto">
+              <img className="cvfoto-enkel" src={sofie} alt="Sofie"/>
+            </div>
+          </div>   
+          <div id="cvfoto-par-2" className="cvfoto-par">
+          <div className="cvfoto">
+          <img className="cvfoto-enkel" src={marius} alt="Marius"/>
+          </div>
+          <div className="cvfoto">
+          <img className="cvfoto-enkel" src={andreas} alt="Andreas"/>
+          </div>
+          </div>
+        
+        </div> 
+         <div>
+        <h1 className="pad-bund">Vores team er klar til at hjælpe! </h1>
         <div class="form-container">
         <input type="text" name="navn" id="navn" placeholder="*Navn" required/>
         <input type="email" name="email" id="email" placeholder="*Email" required/>
         <input type="tel" name="tlf" id="tlf" placeholder="*Tlf" required/>
         <input type="text" name="firmanavn" id="firmanavn" placeholder="Firmanavn"/>
-        <textarea name="beskrivelse" id="beskrivelse" placeholder="Beskrivelse"></textarea>
+        <textarea name="beskrivelse" id="beskrivelse" placeholder="Hvad har du brug for?"></textarea>
         <button type="submit">Send forespørgsel</button>
          </div></div>
-         <div className="placeholder-1"><img className="footerlogo" src={logoblack} alt="logo"/></div>
+         <div className="placeholder-1">
+         <div className="cvfoto-par">      
+            <div className="cvfoto">
+              <img className="cvfoto-enkel" src={loi} alt="Loi"/>
+            </div>
+            <div className="cvfoto">
+              <img className="cvfoto-enkel" src={sofie} alt="Sofie"/>
+            </div>
+          </div>   
+          <div id="cvfoto-par-2" className="cvfoto-par">
+          <div className="cvfoto">
+          <img className="cvfoto-enkel" src={marius} alt="Marius"/>
+          </div>
+          <div className="cvfoto">
+          <img className="cvfoto-enkel" src={andreas} alt="Andreas"/>
+          </div>
+          </div>
+        
+         </div>
         </section>
-        <div className="up-btn" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <div className="up-btn" onClick={handleClick}>
   <svg className="up-arrow" viewBox="0 0 24 24">
     <path d="M4 15l8-8 8 8z" />
   </svg>
