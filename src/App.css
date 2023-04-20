@@ -1,0 +1,974 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("./images/bg.jpg");
+  background-size: cover;
+   background-repeat: no-repeat;
+
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6,
+p {
+  color: #000000;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+:root{
+	--grøn: #0B3D0B;
+	--cta: #6CC551;
+	--sort: #000000;
+	--hvid: #F1F1F1;
+}
+.navigation {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 99;
+  padding: 0.5rem 0rem;
+  background-color: var(--grøn);
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+.brandlogo {
+  height: 50px;
+  padding-left: 20px;
+}
+.kontaktbtn{
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: var(--cta);
+  color: var(--grøn);
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.navigation-menu {
+  margin-left: auto;
+}
+.navigation-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  padding-right: 10%;
+}
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: var(--hvid);
+  padding-right: 30px;
+}
+#btnmobil{
+  display: none;
+  color: #6CC551;
+}
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--cta);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+.kontakticons a{
+  text-decoration: none;
+  color: var(--hvid);
+}
+@media screen and (max-width: 768px) {
+  .up-btn {
+   display: none;
+  }
+
+  .navigation-menu ul {
+    padding: 0;
+
+  }
+  .kontaktbtn{
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: var(--grøn);
+    color: var(--grøn);
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+    #priser{
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+    .lottielogo{
+      height: 300px;
+    }
+    #pc-infografik{
+      display: none;
+    }
+    .animationbox{
+      height: 250x;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 40px;
+  
+    }
+    .hamburger {
+      display: block;
+    }
+    .navigation{
+      position: sticky;
+    }
+    .navigation-menu {
+      margin-left: auto;
+      position: fixed;
+      top: 75px;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--grøn);
+      transition: all 0.4s ease-in-out;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      padding-bottom: 30%;
+    }
+    
+    .navigation-menu.expanded {
+      right: 0;
+    }
+    
+    .navigation-menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    
+    .navigation-menu li {
+      margin: 1rem 0;
+    }
+    
+    .navigation-menu li a {
+      text-decoration: none;
+      display: block;
+      color: var(--hvid);
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: all 0.2s ease-in-out;
+    }
+    
+      .btnlaptop{
+        display:none;
+      }
+
+
+
+
+      footer{
+    background-color: var(--grøn);
+    color: var(--hvid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    footer p{
+      color: var(--hvid);
+    }
+
+    .footercontent{
+      width: 100%;
+      height: 100%;
+      background-color: var(--grøn);
+      color: var(--hvid);
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px; 
+      align-items: center;
+    }
+
+    .footerlogo{
+        padding-bottom: 20px;
+        height: 100px;
+        
+    }
+
+    .kontaktinfo{
+      display: flex;
+      flex-direction: column;
+    
+      padding-bottom: 30px;
+      width: 80%;
+    }
+
+    .kontaktinfo h3{
+      padding-top: 30px;
+      padding-bottom: 16px;
+      color: var(--hvid);
+    }
+
+    .kontaktinfo p{
+      padding-bottom: 12px;
+    }
+    .kontakticons{
+      display: flex;
+      flex-direction: row;
+
+    }
+    .tlf, .mail, .adresse{
+      height: 50px;
+      width: 30px;
+      padding-right: 10px;
+      padding-bottom: 25px;
+    }
+    .brandinfo{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top:30px ;
+        padding-bottom: 30px;
+    }
+
+    .someinfo{
+      display: flex;
+      flex-direction: column;
+
+      padding-bottom: 30px;
+      width: 80%;
+    }
+
+    hr{
+      width: 100%;
+
+    }
+    .some-icons{
+      display: flex;
+      padding-top: 16px;;
+      padding-bottom: 30px;
+    }
+    .linkedin,.facebook,.instagram{
+      height: 30px;
+      padding-left:6px;
+      padding-right: 6px;
+    }
+    .linkedin{
+      padding-left: 0;
+    }
+    .cptext{
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+  }
+.landingpage{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+  .animationbox img{
+    height: 200px;
+    padding-bottom: 30px;
+
+  }
+  .textbox{
+    width: 80%;
+    background-color: var(--grøn);
+    padding: 30px;
+    border-radius: 30px;
+    margin: 0 auto;
+  }
+  .textbox p, .textbox h1{
+    color: var(--hvid);
+  }
+
+  #content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+#content-box #case-titel{
+  margin-top: 70px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.case-box{
+  background-color: var(--grøn);
+  margin: 5%;
+  border-radius: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  color: var(--hvid);
+}
+.case-text p{
+  color: var(--hvid);
+}
+.case-text-hjem{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.casedisplay{
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+.case-text-hjem p{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: var(--sort);
+}
+.vaerdier h1{
+  text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-image: url(./images/kort.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 30px 0 30px 0;
+    overflow: hidden;
+    padding: 10%;
+    margin: 5%;
+}
+.card h3, .card p {
+  color: var(--hvid);
+    text-align: center;
+
+}
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.casedisplay{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#laptopcase{
+  width: 70%;
+  padding-right: 10px;
+  border-radius: 6px;
+}
+#mobilcase{
+  height: 80%;
+  border-radius: 6px;
+}
+.case-text p{
+  padding-bottom: 30px;
+}
+.case-text{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+button {
+  padding: 10px 50px;
+  font-size: 16px;
+  background-color: var(--cta);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#process{
+  margin-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#manifesto-box{
+  background-color: var(--grøn);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#manifesto-box h1, #manifesto-box p{
+  color: var(--hvid);
+}
+#manifesto-box h4{
+  padding-top: 30px;
+  color: var(--cta);
+}
+.manifesto{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+#faktacirkler{
+  margin-top: 50px;
+}
+.faktacirkel-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: var(--grøn);
+}
+.faktacirkel-1 h1{
+  color: var(--cta);
+}
+.faktacirkel-1 p, .faktacirkel-2 p{
+  color: var(--hvid);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.faktacirkel-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: var(--cta);
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+.faktacirkel-2 h1{
+  color: var(--grøn);
+}
+#faktacirkler{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.pad-bund{
+  padding-bottom: 20px;
+}
+#fokus{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.pris-box{
+  background-color: var(--grøn);
+  color: var(--hvid);
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.pris h4{
+  color: var(--hvid);
+}
+.pris{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.pris p{
+  color: var(--cta);
+  font-weight: bold;
+}
+#moms-tekst{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--hvid);
+  padding-left: 50px;
+}
+.pris-text{
+  margin-bottom: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.klippekort-box{
+  background-color: var(--grøn);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+.klippekort-content{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.klippekort-content p {
+  color: var(--hvid);
+}
+.klippekort-content h1{
+  color: var(--cta);
+}
+.klippekort-content hr{
+  margin-top: 30px;
+}
+.klippekort-info{
+  text-align: left;
+  padding-bottom: 20px;
+}
+.klippekort-tekst{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.step8-box{
+  background-color: var(--grøn);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ margin: 0 auto;
+  text-align: center;
+}
+.step8-box h4,.step8-box p{
+  color: var(--hvid);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.step8 h1{
+  color: var(--grøn)0;
+  font-size: 50px;
+}
+.step8{
+  width: 100px;
+  height: 100px;
+  background-color: var(--hvid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#kontakt{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+.placeholder-1{
+  display: none;
+}
+.placeholder-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .animationbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .lottielogo{
+    height: 500px;
+  }
+  .landingpage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+    padding-right: 10%;
+  }
+
+  .vaerdier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .textbox{
+    width: 50%;
+    background-color: var(--grøn);
+    padding: 30px;
+    border-radius: 30px;
+  }
+  .textbox p, .textbox h1{
+    color: var(--hvid);
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    height: 200px;
+  }
+  .card p{
+    text-align: start;
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+  .casedisplay{
+    padding-top: 30px;
+    width: 100%;
+    height: fit-content;
+  }
+  #mobilcase{
+    width: 20%;
+  }
+  #manifesto-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #all6{
+    display: flex;
+    width: 100%;
+  }
+
+  .manifests{
+    width: 100%;
+    padding: 20px;
+  }
+.manifest-titel{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+  .manifesto{
+    padding: 0px;
+    height: 200px;
+  }
+  .manifesto p{
+    color: var(--grøn);
+  }
+  #faktacirkler{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+  }
+  .faktacirkel-2{
+    padding-bottom: 20px;
+    margin-bottom: 300px;
+  }
+  .faktacirkel-1{
+    padding-bottom: 20px;
+  }
+  #prissektion{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .pris-text{
+    padding-right: 30px;
+    padding-left: 0;
+  }
+  .pris h4{
+    color: var(--hvid);
+  }
+  #content-box{
+    margin-top: 100px;
+  }
+  #fokus{
+    padding-left: 10%;
+    padding-right:10% ;
+    padding-bottom:100px ;
+  }
+  #moms-tekst{
+    font-size: small;
+  }
+  .klippekort{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 50px;
+  }
+  .klippekort-tekst{
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 0;
+  }
+  .klippekort-box{
+    width: 950px;
+  }
+  #kontakt{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+.placeholder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+
+#m-infografik{
+  display: none;
+}
+#pc-infografik{
+  width: 85%;
+}
+
+.step8-box{
+  width: 800px;
+}
+
+.klippekort-cases{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+  footer{
+    background-color: var(--grøn);
+    color: var(--hvid);
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    height: 100vh;
+    }
+    footer p{
+      color: var(--hvid);
+    }
+  
+
+    .footercontent{
+      width: 100%;
+      height: 100%;
+      background-color: var(--grøn);
+      color: var(--hvid);
+      display: flex;
+      flex-direction: row;
+      padding-top: 50px; 
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .footerlogo{
+        padding-bottom: 20px;
+        height: 100px;
+        
+    }
+
+    .kontaktinfo{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 30px;
+      width: 80%;
+      padding-left: 60px;
+    }
+
+    .kontaktinfo h3{
+      padding-top: 50px;
+      padding-bottom: 16px;
+      color: var(--hvid);
+    }
+    .kontaktinfo p{
+      padding-bottom: 12px;
+    }
+    .kontakticons{
+      display: flex;
+      flex-direction: row;
+
+    }
+    .tlf, .mail, .adresse{
+      height: 50px;
+      width: 30px;
+      padding-right: 10px;
+      padding-bottom: 25px;
+    }
+    .brandinfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top:30px ;
+        padding-bottom: 30px;
+        margin-right: 500px;
+    }
+
+    .someinfo{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 30px;
+      width: 80%;
+      padding-left:50px ;
+    }
+    .someinfo h3{
+      color: var(--hvid);
+    }
+
+    hr{
+      width: 100%;
+      opacity: 0.7;
+    }
+    .some-icons{
+      display: flex;
+      padding-top: 16px;;
+      padding-bottom: 70px;
+    }
+    .linkedin,.facebook,.instagram{
+      height: 30px;
+      padding-left:6px;
+      padding-right: 6px;
+    }
+    .linkedin{
+      padding-left: 0;
+    }
+
+    .cptext{
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    .placeholder-2{
+      display: none;
+    }
+    .placeholder-1{
+      display: block;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      width: 80%;
+    }
+    .case-text-hjem p{
+      padding-bottom: 30px;
+    }
+    .up-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--cta);
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    
+    .up-btn:hover {
+      opacity: 1;
+    }
+    
+    .up-arrow {
+      fill: #fff;
+      width: 24px;
+      height: 24px;
+    }    
+    }
